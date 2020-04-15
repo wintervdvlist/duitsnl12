@@ -1,0 +1,119 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+$box-color: #cfceba;
+
+.grid {
+  border: 1px solid;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 10px;
+}
+
+p {
+  font-size: 8px;
+}
+
+.highlight{
+  background-color : green;
+  color: white;
+}
+
+.theoryicon{
+  //width: 20px;
+  //object-fit: none;
+  object-position: 0px 0px;
+  height: 30px;
+}
+
+
+.grid:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.grid-col {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  background: #ddd;
+}
+
+.grid-col--4 {
+  margin-right: 0;
+}
+
+/* hide two middle */
+.grid-col--2,
+.grid-col--3 {
+  display: none;
+}
+
+.tgridwicon {
+  display: grid;
+  grid-template-columns: 30px 6fr;
+  grid-template-areas:
+    "tgridicon tgridheader"
+    "tgridtext tgridtext"
+    "tpaper tpaper"
+}
+
+.tgridwithouticon {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-areas:
+    "tgridheader tgridheader"
+    "tgridtext tgridtext"
+    "tpaper tpaper"
+}
+
+.tgridicon{
+  grid-area: tgridicon;
+}
+
+.tgridheader{
+  grid-area: tgridheader;
+}
+.tgridtext{
+  grid-area: tgridtext;
+}
+
+
+.paperroot {
+  display: 'flex';
+  flex-wrap: 'wrap';
+  grid-area: tpaper;
+}
+
+
+.grid-item {
+  background: $box-color; //#09D;
+  margin-bottom: 20px;
+  border: 2px dotted darkgrey;
+  padding: 10px;
+}
+
+
+.theorygridtile{
+  background: $box-color; //#09D;
+  margin-bottom: 20px;
+  border: 2px dotted darkgrey;
+  padding: 10px;
+}
+
+.grid-item--a {
+  height: 80px;
+  background-color: green;
+}
+//.grid-item--b { height: 140px; }
+.grid-item--c {
+  height: 300px;
+}
